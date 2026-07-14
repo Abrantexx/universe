@@ -327,7 +327,9 @@ if(frase === ""){
     escrever();
 
 }function mostrarCapitulo() {
-  criarEstrelasUniverso();
+
+    criarParticulasDouradas();
+
     cena.classList.remove(
     "universo1",
     "universo2",
@@ -496,11 +498,12 @@ function iniciarUniverso() {
     introTexto.classList.add("sugado");
 
     // Portal desperta
-    portal.style.transform =
-"scale(12) rotate(360deg)";
+    portal.style.transition =
+        "transform 3s cubic-bezier(.2,.9,.2,1)";
 
     portal.style.transform =
-"scale(12) rotate(360deg)";
+        "scale(35) rotate(720deg)";
+
     // Flash verde começa
     setTimeout(() => {
 
@@ -537,74 +540,6 @@ setTimeout(() => {
 ========================================================= */
 
 startButton.addEventListener("click", iniciarUniverso);
-
-/* =========================================================
-            ESTRELAS DOS UNIVERSOS
-========================================================= */
-
-function criarEstrelasUniverso(){
-
-    document.querySelectorAll(".estrelaUniverso").forEach(e => e.remove());
-
-    for(let i = 0; i < 90; i++){
-
-        const estrela = document.createElement("div");
-
-        estrela.className = "estrelaUniverso";
-
-        const tamanho = Math.random()*3 + 0.3;
-
-        estrela.style.width = tamanho + "px";
-        estrela.style.height = tamanho + "px";
-
-        estrela.style.left = Math.random()*100 + "%";
-        estrela.style.top = Math.random()*100 + "%";
-
-       estrela.style.opacity =
-0.25 + Math.random() * 0.75;
-let cores;
-
-if(capituloAtual === 1){
-
-    cores = [
-
-        "#ffffff",
-        "#d8c4ff",
-        "#edd9ff",
-        "#bfc7ff"
-
-    ];
-
-}else{
-
-    cores = [
-
-        "#ffffff",
-        "#fef9d8",
-        "#dff3ff",
-        "#cde9ff"
-
-    ];
-
-}
-
-estrela.style.background =
-cores[Math.floor(Math.random()*cores.length)];
-
-estrela.style.color =
-estrela.style.background;
-
-        estrela.style.animationDuration =
-        (2 + Math.random()*6) + "s";
-
-        estrela.style.animationDelay =
-        (-Math.random()*6) + "s";
-
-        cena.appendChild(estrela);
-
-    }
-
-}
 
 /* =========================================================
             POEIRA DOURADA
