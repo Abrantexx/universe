@@ -286,12 +286,13 @@ button:hover{
 
     #2f7200);
 
-    box-shadow:
+  .estrelaUniverso{
 
-    0 0 50px #59ff33,
+    background:white;
 
-    0 0 120px #2eff89;
+    border-radius:50%;
 
+}
 }
 
 /* ==========================================================
@@ -408,9 +409,8 @@ button:hover{
 
     visibility:hidden;
 
-    transition:
-    opacity 1s ease,
-    background 1.5s ease;
+   
+    transition:opacity 1s;
 
     z-index:30;
 
@@ -526,7 +526,7 @@ button:hover{
 
     transparent 70%);
 
-    filter:blur(110px);
+    filter:blur(40px);
 
     animation:nebulosaRespirar 14s ease-in-out infinite alternate;
 
@@ -558,8 +558,8 @@ button:hover{
 
     position:absolute;
 
-    width:1200px;
-    height:1200px;
+   width:700px;
+height:700px;
 
     right:-250px;
     top:-300px;
@@ -578,7 +578,7 @@ button:hover{
 
     transparent 72%);
 
-    filter:blur(150px);
+    filter:blur(100px);
 
     animation:
 
@@ -630,7 +630,7 @@ button:hover{
 
     transparent 72%);
 
-    filter:blur(120px);
+   filter: blur(25px);
 
     animation:universo3Nebulosa 20s ease-in-out infinite alternate;
 
@@ -714,15 +714,9 @@ button:hover{
 
 }
 
-/* ==========================================================
-                    ESTRELAS
-========================================================== */
 
-.estrelaUniverso{
 
-    display:none;
-
-} /* ===========================================
+ /* ===========================================
         BRILHO DAS ESTRELAS
 =========================================== */
 
@@ -732,32 +726,10 @@ button:hover{
     0 0 4px currentColor,
     0 0 8px currentColor;
 
-    animation:
-    piscarUniverso linear infinite,
-    respirarEstrela 10s ease-in-out infinite;
+    animation:piscarUniverso linear infinite
 }
 
-@keyframes respirarEstrela{
 
-    0%{
-
-        transform:scale(.8);
-
-    }
-
-    50%{
-
-        transform:scale(1.35);
-
-    }
-
-    100%{
-
-        transform:scale(.8);
-
-    }
-
-}
 
 /* ==========================================================
                     POEIRA DOURADA
@@ -1070,6 +1042,60 @@ button:hover{
     #universo000 p{
 
         font-size:18px;
+
+    }
+
+}/* ==========================================================
+                    CÉU DOS UNIVERSOS
+========================================================== */
+
+.cena::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.9;
+
+    background-image:
+
+    radial-gradient(circle at 5% 10%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 11% 70%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 18% 26%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 26% 84%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 34% 15%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 42% 62%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 51% 38%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 59% 81%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 68% 24%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 75% 58%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 84% 34%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 92% 18%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 96% 73%,#fff 0 1px,transparent 2px);
+
+    animation:piscarCeu 8s ease-in-out infinite;
+
+}@keyframes piscarCeu{
+
+    0%{
+
+        opacity:.75;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.75;
 
     }
 
