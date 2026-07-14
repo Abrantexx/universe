@@ -396,7 +396,7 @@ function criarEstrela() {
 
     const estrela = document.createElement("div");
 
-    const tamanho = Math.random() * 3 + 1;
+    const tamanho = Math.random() * 4 + 0.5;
 
     estrela.style.position = "absolute";
     estrela.style.width = tamanho + "px";
@@ -547,7 +547,7 @@ function criarEstrelasUniverso(){
 
     document.querySelectorAll(".estrelaUniverso").forEach(e => e.remove());
 
-    for(let i = 0; i < 220; i++){
+    for(let i = 0; i < 90; i++){
 
         const estrela = document.createElement("div");
 
@@ -561,9 +561,8 @@ function criarEstrelasUniverso(){
         estrela.style.left = Math.random()*100 + "%";
         estrela.style.top = Math.random()*100 + "%";
 
-        estrela.style.opacity =
-0.20 + Math.random()*0.80;
-
+       estrela.style.opacity =
+0.25 + Math.random() * 0.75;
 let cores;
 
 if(capituloAtual === 1){
