@@ -1,0 +1,1084 @@
+/* ==========================================================
+                        RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+/* ==========================================================
+                        BODY
+========================================================== */
+
+body{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#05060d;
+
+    color:#fff;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ==========================================================
+                    CÉU DA INTRODUÇÃO
+========================================================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ==========================================================
+                        INTRO
+========================================================== */
+
+.intro{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:760px;
+
+    text-align:center;
+
+}
+
+#introTexto{
+
+    transition:1.6s ease;
+
+}
+
+#introTexto.sugado{
+
+    transform:
+    translateY(70px)
+    scale(.15);
+
+    opacity:0;
+
+    filter:blur(12px);
+
+}
+
+.intro h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    margin-bottom:18px;
+
+}
+
+.intro p{
+
+    color:#d7d7d7;
+
+    font-size:20px;
+
+    line-height:34px;
+
+}
+
+#segundaFrase{
+
+    margin-top:35px;
+
+    min-height:34px;
+
+    font-size:24px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+                        BOTÕES
+========================================================== */
+
+button{
+
+    display:none;
+
+    margin-top:45px;
+
+    padding:16px 48px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#58ffd1;
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px #58ffd1;
+
+}
+
+/* ==========================================================
+                        PORTAL
+========================================================== */
+
+.portal{
+
+    position:relative;
+
+    width:220px;
+    height:220px;
+
+    margin:45px auto;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.glow{
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(120,255,80,.55),
+
+    rgba(60,255,170,.18),
+
+    transparent);
+
+    filter:blur(35px);
+
+}
+
+.ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+}
+
+.ring1{
+
+    width:215px;
+    height:205px;
+
+    border:12px solid #63ff32;
+
+    border-radius:
+
+    61% 39% 57% 43% /
+    42% 58% 44% 56%;
+
+    filter:blur(2px);
+
+    animation:girarHorario 14s linear infinite;
+
+}
+
+.ring2{
+
+    width:180px;
+    height:180px;
+
+    border:8px solid #00d9ff;
+
+    opacity:.45;
+
+    border-radius:
+
+    38% 62% 45% 55% /
+    57% 41% 59% 43%;
+
+    animation:girarAntiHorario 9s linear infinite;
+
+}
+
+.ring3{
+
+    width:145px;
+    height:145px;
+
+    border:6px solid #7fff00;
+
+    opacity:.75;
+
+    border-radius:
+
+    70% 30% 52% 48% /
+    37% 63% 46% 54%;
+
+    animation:girarHorario 5s linear infinite;
+
+}
+
+.core{
+
+    position:absolute;
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    #d8ff95,
+
+    #6cff00,
+
+    #2f7200);
+
+    box-shadow:
+
+    0 0 50px #59ff33,
+
+    0 0 120px #2eff89;
+
+}
+
+/* ==========================================================
+                        FLASH
+========================================================== */
+
+#flash{
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    transition:opacity 1.2s ease;
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    #c8ff8a 0%,
+
+    #7CFF00 40%,
+
+    #4caf00 100%);
+
+}
+
+#flash.show{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+                    UNIVERSO 000
+========================================================== */
+
+#universo000{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#05060d;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity 1.2s ease;
+
+    z-index:20;
+
+}
+
+#universo000.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#universo000 h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    letter-spacing:8px;
+
+}
+
+#universo000 p{
+
+    margin-top:18px;
+
+    color:#c9c9c9;
+
+    font-size:22px;
+
+}/* ==========================================================
+                    CAPÍTULOS
+========================================================== */
+
+.cena{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+    opacity 1s ease,
+    background 1.5s ease;
+
+    z-index:30;
+
+}
+
+.cena.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================================
+                        PAINEL
+========================================================== */
+
+.painel{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:760px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.painel h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:54px;
+
+    margin-bottom:12px;
+
+}
+
+.painel h3{
+
+    font-size:22px;
+
+    font-weight:300;
+
+    color:#8dffcb;
+
+    margin-bottom:55px;
+
+}
+
+#textoHistoria{
+
+    min-height:150px;
+
+    font-size:28px;
+
+    line-height:44px;
+
+}
+
+#nextButton{
+
+    display:none;
+
+    margin-top:55px;
+
+}
+
+/* ==========================================================
+                    UNIVERSO I
+========================================================== */
+
+.cena.universo1{
+
+    background:
+
+    radial-gradient(circle at top,
+
+    #182235 0%,
+
+    #0b0e18 45%,
+
+    #020203 100%);
+
+}
+
+.cena.universo1::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    left:-250px;
+    top:-280px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(170,180,220,.12),
+
+    rgba(120,140,200,.05),
+
+    transparent 70%);
+
+    filter:blur(110px);
+
+    animation:nebulosaRespirar 14s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+                    UNIVERSO II
+========================================================== */
+
+.cena.universo2{
+
+    background:
+
+    radial-gradient(circle at top,
+
+    #4f2d8f 0%,
+
+    #28134d 35%,
+
+    #12071f 75%,
+
+    #050307 100%);
+
+}
+
+.cena.universo2::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1200px;
+    height:1200px;
+
+    right:-250px;
+    top:-300px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(170,110,255,.22),
+
+    rgba(120,70,230,.12),
+
+    rgba(70,40,160,.04),
+
+    transparent 72%);
+
+    filter:blur(150px);
+
+    animation:
+
+    nebulosaRoxa 24s ease-in-out infinite alternate;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+                    UNIVERSO III
+========================================================== */
+
+.cena.universo3{
+
+    background:
+
+    radial-gradient(circle at top,
+
+    #5b2fa5 0%,
+
+    #31155d 45%,
+
+    #12071f 100%);
+
+}
+
+.cena.universo3::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1100px;
+    height:1100px;
+
+    left:-250px;
+    bottom:-350px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(180,130,255,.16),
+
+    rgba(120,80,220,.08),
+
+    transparent 72%);
+
+    filter:blur(120px);
+
+    animation:universo3Nebulosa 20s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+                    UNIVERSO IV
+========================================================== */
+
+.cena.universo4{
+
+    background:
+
+    radial-gradient(circle at left,
+
+    rgba(70,110,255,.28),
+
+    transparent 45%),
+
+    radial-gradient(circle at right,
+
+    rgba(180,70,255,.22),
+
+    transparent 45%),
+
+    #080913;
+
+}
+
+/* ==========================================================
+                    UNIVERSO V
+========================================================== */
+
+.cena.universo5{
+
+    background:
+
+    radial-gradient(circle,
+
+    #2b8fff,
+
+    #1553a7,
+
+    #071a38);
+
+}
+
+/* ==========================================================
+                    UNIVERSO VI
+========================================================== */
+
+.cena.universo6{
+
+    background:
+
+    radial-gradient(circle,
+
+    #20263c,
+
+    #090c16,
+
+    #020203);
+
+}
+
+/* ==========================================================
+                    UNIVERSO VII
+========================================================== */
+
+.cena.universo7{
+
+    background:
+
+    radial-gradient(circle,
+
+    #2f8b67,
+
+    #19523b,
+
+    #040806);
+
+}
+
+/* ==========================================================
+                    ESTRELAS
+========================================================== */
+
+.estrelaUniverso{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    pointer-events:none;
+
+    animation:piscarUniverso linear infinite;
+
+} /* ===========================================
+        BRILHO DAS ESTRELAS
+=========================================== */
+
+.estrelaUniverso{
+
+    box-shadow:
+    0 0 4px currentColor,
+    0 0 8px currentColor;
+
+    animation:
+    piscarUniverso linear infinite,
+    respirarEstrela 10s ease-in-out infinite;
+}
+
+@keyframes respirarEstrela{
+
+    0%{
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        transform:scale(1.35);
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+    }
+
+}
+
+/* ==========================================================
+                    POEIRA DOURADA
+========================================================== */
+
+.poeiraDourada{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#ffd76b;
+
+    opacity:.35;
+
+    filter:blur(.4px);
+
+    pointer-events:none;
+
+    animation:flutuarDourado 12s linear infinite;
+
+}/* ==========================================================
+                    ANIMAÇÕES
+========================================================== */
+
+@keyframes girarHorario{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes girarAntiHorario{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+@keyframes piscar{
+
+    0%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+    }
+
+}
+
+@keyframes piscarUniverso{
+
+    0%{
+
+        opacity:.25;
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        opacity:.25;
+        transform:scale(.8);
+
+    }
+
+}
+
+@keyframes respirarTexto{
+
+    0%{
+
+        opacity:.65;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.02);
+
+    }
+
+    100%{
+
+        opacity:.65;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes nebulosaRespirar{
+
+    from{
+
+        transform:
+        scale(1)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        scale(1.12)
+        rotate(8deg);
+
+    }
+
+}
+
+@keyframes nebulosaRoxa{
+
+    from{
+
+        transform:
+        scale(1)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        scale(1.08)
+        rotate(-10deg);
+
+    }
+
+}
+
+@keyframes universo3Nebulosa{
+
+    from{
+
+        transform:
+        scale(1)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        scale(1.08)
+        rotate(6deg);
+
+    }
+
+}
+
+@keyframes flutuarDourado{
+
+    from{
+
+        transform:translateY(30px);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.35;
+
+    }
+
+    80%{
+
+        opacity:.35;
+
+    }
+
+    to{
+
+        transform:translateY(-40px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================================
+                    TEXTO
+========================================================== */
+
+#textoHistoria{
+
+    animation:respirarTexto 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+                    RESPONSIVO
+========================================================== */
+
+@media(max-width:700px){
+
+    .intro h1{
+
+        font-size:42px;
+
+    }
+
+    .intro p{
+
+        font-size:17px;
+
+        line-height:28px;
+
+    }
+
+    #segundaFrase{
+
+        font-size:20px;
+
+    }
+
+    .portal{
+
+        width:170px;
+        height:170px;
+
+    }
+
+    button{
+
+        width:90%;
+
+    }
+
+    .painel{
+
+        width:92%;
+
+    }
+
+    .painel h2{
+
+        font-size:40px;
+
+    }
+
+    .painel h3{
+
+        font-size:18px;
+
+        margin-bottom:35px;
+
+    }
+
+    #textoHistoria{
+
+        font-size:22px;
+
+        line-height:36px;
+
+    }
+
+    #universo000 h2{
+
+        font-size:40px;
+
+        letter-spacing:5px;
+
+    }
+
+    #universo000 p{
+
+        font-size:18px;
+
+    }
+
+}
