@@ -496,12 +496,11 @@ function iniciarUniverso() {
     introTexto.classList.add("sugado");
 
     // Portal desperta
-    portal.style.transition =
-        "transform 3s cubic-bezier(.2,.9,.2,1)";
+    portal.style.transform =
+"scale(12) rotate(360deg)";
 
     portal.style.transform =
-        "scale(35) rotate(720deg)";
-
+"scale(12) rotate(360deg)";
     // Flash verde começa
     setTimeout(() => {
 
