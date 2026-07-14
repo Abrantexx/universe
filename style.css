@@ -720,15 +720,7 @@ button:hover{
 
 .estrelaUniverso{
 
-    position:absolute;
-
-    border-radius:50%;
-
-    background:white;
-
-    pointer-events:none;
-
-    animation:piscarUniverso linear infinite;
+    display:none;
 
 } /* ===========================================
         BRILHO DAS ESTRELAS
